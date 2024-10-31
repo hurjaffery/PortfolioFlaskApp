@@ -1,0 +1,42 @@
+in this case study, students will create a simple portfolio website using Flask for the backend and bootstrap, html and css for the frontend. The website will consist of three pages, each accessible via a navigation bar. The application will collect user details, display them in a portfolio layout, and include a specific use case for the third page.
+
+ 
+1. navigation bar and buttons: 
+each page must have a navigation bar with links to the three pages
+forward and backward navigation buttons should be present on all pages.
+
+pages:
+homepage:
+the homepage should feature a welcoming message such as welcome to my portfolio builder 
+it should have background image 
+there should be a prominent button lead to create ur portfolio, guiding users to the form page where they can input their details 
+the button should be styled using bootstrep to stand out, and it should link to the form page (/create-portfolio)
+Form:
+form where users input following
+first name 
+last name 
+email 
+phone number
+profile picture (upload image)
+short bio
+skills or expertise
+links to any online profiles
+
+once the form is submitted, the data should be saved in a database. sql lite preferred
+Portfolio Page:
+this page should display the submitted information in an aesthetically pleasing layout. The profile picture should be displayed and the design should follow modern UI principles using bootstrap for styling. 
+
+Third Page: (Custom use case)
+
+The third page can have any custom features that enhances the portfolios functionality and interaction. Below are examples
+
+Contact me page: a page with a contact form where users can leave a message 
+
+Use following functionality for this project.
+frontend:
+use bootstap, html and css for styling and ensuring responsiveness
+backend:
+flask should be used to handle form submissions handle data process data and display the portfolio 
+database:
+use sqllite
+

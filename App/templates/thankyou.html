@@ -1,0 +1,64 @@
+{% extends 'layout.html' %} {% block content %}
+<div
+  class="container text-center d-flex justify-content-center align-items-center"
+  style="min-height: 70vh"
+>
+  <div>
+    <h1 class="display-4 text-white">Thank You!</h1>
+    <p class="lead text-white">
+      Your portfolio has been successfully submitted.
+    </p>
+
+    <!-- Portfolio Preview Section -->
+    <div class="card mb-3">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <!-- Display Profile Picture -->
+          {% if user.profile_picture %}
+          <img
+            src="{{ url_for('static', filename=user.profile_picture) }}"
+            class="card-img"
+            alt="Profile Picture"
+          />
+          {% else %}
+          <img
+            src="https://via.placeholder.com/150"
+            class="card-img"
+            alt="Profile Picture"
+          />
+          {% endif %}
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <!-- User's Name in plain black -->
+            <h5 class="card-title" style="color: black; font-weight: normal">
+              {{ user.first_name }} {{ user.last_name }}
+            </h5>
+
+            <!-- Contact Information (in plain black with no effects) -->
+            <div
+              style="color: black; font-weight: normal; text-transform: none"
+            >
+              <p class="card-text"><strong>Email:</strong> {{ user.email }}</p>
+              <p class="card-text"><strong>Phone:</strong> {{ user.phone }}</p>
+            </div>
+
+            <p class="card-text"><strong>Bio:</strong> {{ user.bio }}</p>
+            <p class="card-text"><strong>Skills:</strong> {{ user.skills }}</p>
+            <p class="card-text">
+              <strong>Online Profiles:</strong> {{ user.links }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="{{ url_for('home') }}" class="btn btn-success btn-lg"
+      >Go Back to Home</a
+    >
+    <a href="{{ url_for('create_portfolio') }}" class="btn btn-secondary btn-lg"
+      >Create Another Portfolio</a
+    >
+  </div>
+</div>
+{% endblock %}

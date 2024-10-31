@@ -1,0 +1,38 @@
+/* General Styles */
+body {
+  background-color: #f4f4f9;
+}
+
+/* Custom Jumbotron */
+.jumbotron {
+  background-color: #333;
+  color: white;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Form Styling */
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Styles for Portfolio Page */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.card-body h5 {
+  font-weight: bold;
+}
+
+.card-body p {
+  color: #555;
+}

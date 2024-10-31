@@ -1,0 +1,16 @@
+{% extends 'layout.html' %} {% block content %}
+<div
+  class="container text-center d-flex justify-content-center align-items-center"
+  style="min-height: 70vh"
+>
+  <div>
+    <h1 class="display-4 text-white">Welcome to My Portfolio Builder</h1>
+    <p class="lead text-white">
+      Create a professional portfolio in just a few clicks!
+    </p>
+    <a href="{{ url_for('create_portfolio') }}" class="btn btn-primary btn-lg">
+      Create Your Portfolio
+    </a>
+  </div>
+</div>
+{% endblock %}

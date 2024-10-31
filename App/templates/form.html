@@ -1,0 +1,98 @@
+{% extends 'layout.html' %} {% block content %}
+<h2 class="text-center mb-4">Create Your Portfolio</h2>
+<form
+  action="{{ url_for('create_portfolio') }}"
+  method="POST"
+  enctype="multipart/form-data"
+  class="col-md-8 offset-md-2"
+>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="first_name" style="color: black">First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="first_name"
+        name="first_name"
+        placeholder="John"
+        required
+      />
+    </div>
+    <div class="form-group col-md-6">
+      <label for="last_name" style="color: black">Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="last_name"
+        name="last_name"
+        placeholder="Doe"
+        required
+      />
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email" style="color: black">Email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      placeholder="john.doe@example.com"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="phone" style="color: black">Phone Number</label>
+    <input
+      type="tel"
+      class="form-control"
+      id="phone"
+      name="phone"
+      placeholder="+123456789"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="bio" style="color: black">Short Bio</label>
+    <textarea
+      class="form-control"
+      id="bio"
+      name="bio"
+      rows="3"
+      placeholder="Tell us something about yourself..."
+    ></textarea>
+  </div>
+  <div class="form-group">
+    <label for="skills" style="color: black">Skills or Expertise</label>
+    <textarea
+      class="form-control"
+      id="skills"
+      name="skills"
+      rows="2"
+      placeholder="Your skills..."
+    ></textarea>
+  </div>
+  <div class="form-group">
+    <label for="profile_picture" style="color: black">Profile Picture</label>
+    <input
+      type="file"
+      class="form-control-file"
+      id="profile_picture"
+      name="profile_picture"
+      accept="image/*"
+    />
+  </div>
+  <div class="form-group">
+    <label for="links" style="color: black">Links to Online Profiles</label>
+    <textarea
+      class="form-control"
+      id="links"
+      name="links"
+      placeholder="LinkedIn, GitHub, etc."
+    ></textarea>
+  </div>
+  <button type="submit" class="btn btn-success btn-block">
+    Submit Portfolio
+  </button>
+</form>
+{% endblock %} i
